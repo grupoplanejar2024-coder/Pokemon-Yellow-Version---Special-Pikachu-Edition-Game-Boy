@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pokémon: Yellow Version - Special Pikachu Edition - Kubo Touch</title>
     <style>
-        * { box-sizing: border-box; }
+        *, *::before, *::after { box-sizing: border-box; }
         body, html { 
             margin: 0; 
             padding: 0; 
@@ -65,19 +65,19 @@
             cursor: pointer;
         }
 
-        /* Cartucho Game Boy */
+        /* Cartucho Game Boy Amarelo (Pokémon Yellow) */
         .gb-cart-body {
             width: 240px;
             height: 274px;
             position: relative;
-            background: linear-gradient(180deg, #b8b7bf 0%, #9b9aa2 100%);
+            background: linear-gradient(180deg, #f5c71a 0%, #cfa006 100%);
             border-radius: 8px 6px 6px 6px;
             clip-path: polygon(0 0, calc(100% - 22px) 0, calc(100% - 22px) 16px, 100% 16px, 100% 100%, 0 100%);
             box-shadow: 
-                inset 0 2px 3px rgba(255,255,255,0.6),
-                inset 0 -4px 7px rgba(0,0,0,0.38),
-                inset 3px 0 4px rgba(255,255,255,0.3),
-                inset -3px 0 4px rgba(0,0,0,0.35);
+                inset 0 2px 3px rgba(255,244,170,0.65),
+                inset 0 -4px 7px rgba(85,58,0,0.45),
+                inset 3px 0 4px rgba(255,240,150,0.35),
+                inset -3px 0 4px rgba(85,58,0,0.42);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -99,11 +99,11 @@
         .gb-logo-oval {
             width: 100%;
             height: 36px;
-            background: linear-gradient(180deg, #a3a2aa 0%, #b1b0b8 100%);
+            background: linear-gradient(180deg, #d8a809 0%, #eab910 100%);
             border-radius: 18px;
             box-shadow: 
-                inset 0 2px 4px rgba(0,0,0,0.35),
-                0 1px 1px rgba(255,255,255,0.5);
+                inset 0 2px 4px rgba(75,50,0,0.45),
+                0 1px 1px rgba(255,245,175,0.5);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -114,8 +114,8 @@
             font-weight: 900;
             font-style: italic;
             letter-spacing: 0.4px;
-            color: #7c7b83;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.55), 0 -1px 0 rgba(0,0,0,0.3);
+            color: #9e7302;
+            text-shadow: 0 1px 0 rgba(255,240,155,0.55), 0 -1px 0 rgba(70,45,0,0.4);
             white-space: nowrap;
         }
 
@@ -132,9 +132,9 @@
             height: 164px;
             margin-top: 12px;
             padding: 3px;
-            background: #84838b;
+            background: #b88c04;
             border-radius: 6px;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.5), 0 1px 1px rgba(255,255,255,0.45);
+            box-shadow: inset 0 2px 4px rgba(65,42,0,0.55), 0 1px 1px rgba(255,245,175,0.45);
             display: flex;
         }
 
@@ -146,14 +146,14 @@
             position: relative;
             display: flex;
             background: #e6be1e;
-            border: 1px solid #2b2618;
+            border: 1px solid #3d2b02;
         }
 
         /* Abas laterais do adesivo */
         .gb-sticker-strip {
             width: 18px;
             height: 100%;
-            background: linear-gradient(180deg, #8b918a 0%, #737972 100%);
+            background: linear-gradient(180deg, #dfb312 0%, #c49807 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -161,11 +161,11 @@
         }
 
         .gb-sticker-strip.left {
-            border-right: 1px solid rgba(0,0,0,0.35);
+            border-right: 1px solid rgba(60,40,0,0.35);
         }
 
         .gb-sticker-strip.right {
-            border-left: 1px solid rgba(0,0,0,0.35);
+            border-left: 1px solid rgba(60,40,0,0.35);
         }
 
         .gb-sticker-strip span {
@@ -174,7 +174,7 @@
             font-size: 6px;
             font-weight: 800;
             letter-spacing: 0.6px;
-            color: #161816;
+            color: #261b02;
             white-space: nowrap;
         }
 
@@ -226,8 +226,8 @@
             height: 0;
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
-            border-top: 15px solid #8c8b93;
-            filter: drop-shadow(0 1px 0 rgba(255,255,255,0.45));
+            border-top: 15px solid #bf9205;
+            filter: drop-shadow(0 1px 0 rgba(255,245,175,0.45));
         }
 
         .content { padding: 20px; }
@@ -284,7 +284,7 @@
     </header>
 
     <div id="game-card">
-        <!-- Cartucho Game Boy 3D -->
+        <!-- Cartucho Game Boy 3D Amarelo -->
         <div class="cartridge-wrapper" id="cartridge3d">
             <div class="gb-cart-body">
                 <!-- Topo com logotipo em relevo -->
@@ -378,6 +378,7 @@
             window.EJS_core = 'gb';
             window.EJS_gameName = "Pokemon - Yellow Version - Special Pikachu Edition";
             window.EJS_color = '#e6be1e';
+            window.EJS_colorization = true;
             window.EJS_startOnLoaded = true;
             window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
             window.EJS_gameUrl = 'Pokemon%20-%20Yellow%20Version%20-%20Special%20Pikachu%20Edition%20%28USA%2C%20Europe%29%20%28GBC%2CSGB%20Enhanced%29.gb';
